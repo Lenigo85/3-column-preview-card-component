@@ -1,0 +1,160 @@
+
+:root {
+--bright-orange: hsl(31, 77%, 52%);
+--dark-cyan: hsl(184, 100%, 22%);
+--very-dark-cyan: hsl(179, 100%, 13%);
+--transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+--very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+/*
+FUENTES A UTILIZAR
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+body {
+    font-size: 15px;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    /*
+    background-image: url(design/desktop-design.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    */
+    background-color: var(--very-light-gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cars {
+    width: calc(100vw - 40%);
+    min-height: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#car {
+    padding: 50px;
+    width: 33.33%;
+}
+
+#car img {
+    padding-bottom: 10%;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 5%;
+}
+
+p {
+    color: var(--transparent-white);
+    font-family: 'Inter', sans-serif;
+    line-height: 25px;
+}
+
+#car a {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: var(--very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40%;
+}
+
+#car a:hover {
+    background-color: transparent;
+    outline: 2px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sedans a {
+    color: var(--bright-orange);
+}
+
+.suvs a {
+    color: var(--dark-cyan);
+}
+
+.luxury a {
+    color: var(--very-dark-cyan);
+}
+
+
+@media screen and (max-width: 403px) {
+    .cars {
+        flex-direction: column;
+        font-size: .8em;
+    }
+
+    #car {
+        padding-top: 15%;
+        padding-bottom: 25%;
+    }
+
+    #car h1 {
+        font-size: 150%;
+        padding-bottom: 5%;
+    }
+    
+    #car p {
+        color: var(--transparent-white);
+        font-family: 'Inter', sans-serif;
+        line-height: 20px;
+        padding-bottom: 15%;
+    }
+    
+    #car a {
+        height: 10%;
+        width: 40%;
+        display: flex;
+        align-items: center;
+    }
+
+    .sedans {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .luxury {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+
+
+
+
+
