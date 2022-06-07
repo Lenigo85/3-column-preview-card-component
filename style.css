@@ -15,6 +15,7 @@ font-family: 'Lexend Deca', sans-serif;
 
 body {
     font-size: 15px;
+    background-color: var(--very-light-gray);
 }
 
 .background {
@@ -25,7 +26,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     */
-    background-color: var(--very-light-gray);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -41,6 +41,7 @@ body {
 }
 
 #car {
+    position: relative;
     padding: 50px;
     width: 33.33%;
 }
@@ -62,6 +63,10 @@ p {
     line-height: 25px;
 }
 
+#button {
+    height: 130px;
+}
+
 #car a {
     width: 150px;
     height: 50px;
@@ -73,6 +78,8 @@ p {
     align-items: center;
     justify-content: center;
     margin-top: 40%;
+    position: absolute;
+    bottom: 50px;
 }
 
 #car a:hover {
@@ -109,35 +116,97 @@ p {
     color: var(--very-dark-cyan);
 }
 
+/*FLEX DIRECTION: ROW*/
 
-@media screen and (max-width: 403px) {
+@media screen and (max-width: 1200px) {
+    #car a {
+        width: 135px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #car {
+        padding: 50px 30px 50px;
+    }
+
+    #car img {
+        width: 50px;
+    }
+    
+    #car a {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    body {
+        font-size: .7em;
+    }
+    
+    #car {
+        padding: 50px 20px 20px;
+        max-height: 480px;
+    }
+
+    #car p {
+        line-height: 1.9em;
+    }
+
+    #car a {
+        width: 90px;
+        height: 35px;
+    }
+}
+
+
+/*FLEX DIRECTION: COLUMN*/
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 12px;
+    }
+    
     .cars {
         flex-direction: column;
         font-size: .8em;
     }
 
     #car {
-        padding-top: 15%;
-        padding-bottom: 25%;
+        width: 100%;
+        padding: 30px;
+    }
+
+    #car img {
+        padding-bottom: 10px;
     }
 
     #car h1 {
-        font-size: 150%;
-        padding-bottom: 5%;
+        font-size: 200%;
+        padding-bottom: 2%;
     }
     
     #car p {
         color: var(--transparent-white);
         font-family: 'Inter', sans-serif;
-        line-height: 20px;
-        padding-bottom: 15%;
+        line-height: 15px;
+        padding-bottom: 0;
+    }
+
+    #button {
+        height: 50px;
     }
     
     #car a {
-        height: 10%;
-        width: 40%;
         display: flex;
         align-items: center;
+        width: 80px;
+        height: 30px;
+        bottom: 2.5em;
+        margin-bottom: 5px;
     }
 
     .sedans {
