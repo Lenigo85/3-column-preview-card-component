@@ -40,13 +40,13 @@ body {
     justify-content: space-between;
 }
 
-#car {
+.car {
     position: relative;
     padding: 50px;
     width: 33.33%;
 }
 
-#car img {
+.car img {
     padding-bottom: 10%;
 }
 
@@ -63,11 +63,11 @@ p {
     line-height: 25px;
 }
 
-#button {
+.button {
     height: 130px;
 }
 
-#car a {
+.car a {
     width: 150px;
     height: 50px;
     border-radius: 50px;
@@ -82,59 +82,59 @@ p {
     bottom: 50px;
 }
 
-#car a:hover {
+.car a:hover {
     background-color: transparent;
     outline: 2px solid hsl(0, 0%, 95%);
     color: hsl(0, 0%, 95%);
 }
 
-.sedans {
+#sedans {
     background-color: var(--bright-orange);
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
 
-.suvs {
+#suvs {
     background-color: var(--dark-cyan);
 }
 
-.luxury {
+#luxury {
     background-color: var(--very-dark-cyan);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.sedans a {
+#sedans a {
     color: var(--bright-orange);
 }
 
-.suvs a {
+#suvs a {
     color: var(--dark-cyan);
 }
 
-.luxury a {
+#luxury a {
     color: var(--very-dark-cyan);
 }
 
 /*FLEX DIRECTION: ROW*/
 
 @media screen and (max-width: 1200px) {
-    #car a {
+    .car a {
         width: 135px;
         height: 40px;
     }
 }
 
 @media screen and (max-width: 1100px) {
-    #car {
+    .car {
         padding: 50px 30px 50px;
     }
 
-    #car img {
+    .car img {
         width: 50px;
     }
     
-    #car a {
+    .car a {
         width: 120px;
         height: 40px;
     }
@@ -146,16 +146,16 @@ p {
         font-size: .7em;
     }
     
-    #car {
+    .car {
         padding: 50px 20px 20px;
         max-height: 480px;
     }
 
-    #car p {
+    .car p {
         line-height: 1.9em;
     }
 
-    #car a {
+    .car a {
         width: 90px;
         height: 35px;
     }
@@ -175,32 +175,32 @@ p {
         font-size: .8em;
     }
 
-    #car {
+    .car {
         width: 100%;
         padding: 30px;
     }
 
-    #car img {
+    .car img {
         padding-bottom: 10px;
     }
 
-    #car h1 {
+    .car h1 {
         font-size: 200%;
         padding-bottom: 2%;
     }
     
-    #car p {
+    .car p {
         color: var(--transparent-white);
         font-family: 'Inter', sans-serif;
         line-height: 15px;
         padding-bottom: 0;
     }
 
-    #button {
+    .button {
         height: 50px;
     }
     
-    #car a {
+    .car a {
         display: flex;
         align-items: center;
         width: 80px;
@@ -209,13 +209,13 @@ p {
         margin-bottom: 5px;
     }
 
-    .sedans {
+    #sedans {
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 0;
     }
 
-    .luxury {
+    #luxury {
         border-top-right-radius: 0;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
