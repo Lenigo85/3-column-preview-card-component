@@ -9,77 +9,93 @@
 
 /*
 FUENTES A UTILIZAR
-font-family: 'Inter', sans-serif;
+font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif;
 */
 
 body {
     font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
     background-color: var(--very-light-gray);
 }
 
 .background {
-    width: 100%;
     height: 100vh;
+    width: 100vw;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*
-    background-image: url(design/desktop-design.jpg);
+    background-image: url(design/);
     background-repeat: no-repeat;
     background-position: center;
     */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 .cars {
-    width: calc(100vw - 40%);
-    min-height: 500px;
+    width: 920px;
+    max-width: calc(100vw - 10%);
+    max-height: calc(100vh - 1px);
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    top: 20px;
 }
 
 .car {
     position: relative;
-    padding: 50px;
+    padding-top: 49px;
+    padding-left: 47px;
     width: 33.33%;
 }
 
 .car img {
-    padding-bottom: 10%;
+    padding-bottom: 2%;
 }
 
-h1 {
+.title {
+    font-size: 2.6em;
+    font-family: 'Big Shoulders Display', cursive;
     text-transform: uppercase;
     color: var(--very-light-gray);
-    font-family: 'Inter', sans-serif;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
 }
 
 p {
     color: var(--transparent-white);
-    font-family: 'Inter', sans-serif;
-    line-height: 25px;
+    line-height: 24px;
+    margin-right: 20%;
 }
 
-.button {
+.button-container {
     height: 130px;
 }
 
 .car a {
-    width: 150px;
+    width: 148px;
     height: 50px;
     border-radius: 50px;
     background-color: var(--very-light-gray);
-    font-family: 'Lexend Deca', sans-serif;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 40%;
     position: absolute;
-    bottom: 50px;
+    bottom: 45px;
+}
+
+.sedans a {
+    color: var(--bright-orange);
+}
+
+.suvs a {
+    color: var(--dark-cyan);
+}
+
+.luxury a {
+    color: var(--very-dark-cyan);
 }
 
 .car a:hover {
@@ -88,35 +104,33 @@ p {
     color: hsl(0, 0%, 95%);
 }
 
-#sedans {
+.sedans {
     background-color: var(--bright-orange);
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
 
-#suvs {
+.suvs {
     background-color: var(--dark-cyan);
 }
 
-#luxury {
+.luxury {
     background-color: var(--very-dark-cyan);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-#sedans a {
+.sedans a {
     color: var(--bright-orange);
 }
 
-#suvs a {
+.suvs a {
     color: var(--dark-cyan);
 }
 
-#luxury a {
+.luxury a {
     color: var(--very-dark-cyan);
 }
-
-/*FLEX DIRECTION: ROW*/
 
 @media screen and (max-width: 1200px) {
     .car a {
@@ -125,100 +139,37 @@ p {
     }
 }
 
-@media screen and (max-width: 1100px) {
-    .car {
-        padding: 50px 30px 50px;
-    }
-
-    .car img {
-        width: 50px;
-    }
+@media screen and (max-width: 771px) {
     
-    .car a {
-        width: 120px;
-        height: 40px;
-    }
-}
-
-@media screen and (max-width: 850px) {
-
-    body {
-        font-size: .7em;
-    }
-    
-    .car {
-        padding: 50px 20px 20px;
-        max-height: 480px;
-    }
-
-    .car p {
-        line-height: 1.9em;
-    }
-
-    .car a {
-        width: 90px;
-        height: 35px;
-    }
-}
-
-
-/*FLEX DIRECTION: COLUMN*/
-
-@media screen and (max-width: 600px) {
-
-    body {
-        font-size: 12px;
+    .background {
+        display: flex;
+        justify-content: center;
     }
     
     .cars {
         flex-direction: column;
-        font-size: .8em;
+        top: 1px;
+        width: 328px;
     }
 
     .car {
         width: 100%;
-        padding: 30px;
     }
 
-    .car img {
-        padding-bottom: 10px;
-    }
-
-    .car h1 {
-        font-size: 200%;
-        padding-bottom: 2%;
-    }
-    
-    .car p {
-        color: var(--transparent-white);
-        font-family: 'Inter', sans-serif;
-        line-height: 15px;
-        padding-bottom: 0;
-    }
-
-    .button {
-        height: 50px;
-    }
-    
-    .car a {
-        display: flex;
-        align-items: center;
-        width: 80px;
-        height: 30px;
-        bottom: 2.5em;
-        margin-bottom: 5px;
-    }
-
-    #sedans {
+    .sedans {
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 0;
     }
 
-    #luxury {
+    .luxury {
         border-top-right-radius: 0;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
+    }
+
+    .button-container {
+        height: 110px;
     }
 }
 
